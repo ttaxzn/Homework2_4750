@@ -1,12 +1,12 @@
 class VacuumState:
     def __init__(self, dirt_loc, vacuum_loc, depth, path, path_cost, parent, state_index):
-        self.dirt_loc = dirt_loc  # Location coordinates
-        self.vacuum_loc = vacuum_loc  # Vacuum coordinates
+        self.dirt_loc = dirt_loc  # Location
+        self.vacuum_loc = vacuum_loc  # Vacuum location
         self.depth = depth  # Depth of the node
         self.path = path  # Path
         self.path_cost = path_cost  # Path cost
-        self.parent = parent  # Parent state reference
-        self.state_index = state_index  # State list index
+        self.parent = parent  # Parent reference
+        self.state_index = state_index  # State index list
 
     def is_goal_state(self):
         return len(self.dirt_loc) == 0 
